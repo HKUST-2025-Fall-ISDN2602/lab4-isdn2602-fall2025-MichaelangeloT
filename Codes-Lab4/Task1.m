@@ -5,6 +5,7 @@ addpath("library_p\");
 
 % Load the input image
 lorem_img = imread('lorem_img.png');
+lorem_img = transpose(lorem_img);
  
 % display the raw image
 figure(1); clf;
@@ -28,4 +29,5 @@ for i=1:length(dict)
     % if dict = 0, separate dictionaries for black and white runs
     size_huffman = [ size_huffman length(huffman_encode(runs,dict(i)))];
 end
+
 size_huffman
